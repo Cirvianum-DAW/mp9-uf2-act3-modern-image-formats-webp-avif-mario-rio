@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Showcase</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-200">
+    <nav class="p-6 bg-white flex justify-between mb-6">
+      <ul class="flex items-center">
+        <li class="mr-6">
+          <a class="text-blue-500" href="#">Home</a>
+        </li>
+        <li class="mr-6">
+          <a class="text-blue-500" href="#">About</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="container mx-auto">
+      <input type="file" id="imageInput" multiple accept="image/*" />
+      <table class="table-auto w-full">
+        <thead>
+          <tr>
+            <th class="px-4 py-2">Image Name</th>
+            <th class="px-4 py-2">Original Size (kB)</th>
+            <th class="px-4 py-2">JPG (saving %)</th>
+            <th class="px-4 py-2">WEB (saving %)</th>
+          </tr>
+        </thead>
+        <tbody id="imageTable"></tbody>
+      </table>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
