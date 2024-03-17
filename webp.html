@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Format Experiment | Logotip</title>
+    <link
+        href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+
+<body class="bg-gray-300">
+    <nav class="bg-blue-500 text-white text-center p-5">
+        <ul class="flex justify-center space-x-4">
+            <li><a href="index.html">Index</a></li>
+            <li><a href="avif.html">AVIF</a></li>
+        </ul>
+    </nav>
+
+    <header class="bg-blue-500 text-white text-center p-5">
+        <h1 class="text-4xl">WebP</h1>
+    </header>
+
+    <main class="text-base text-center p-10 flex flex-col">
+      <section class="text-base text-center p-10">
+        <h2 class="text-2xl mb-4 font-bold">Questions</h2>
+        <p class="mb-2 font-bold">What happens with GIF file?</p>
+        <p class="mb-2 font-bold">Can we use WebP to replace it?</p>
+        <div class="mt-4">The GIF file is displayed as an animation. WebP can be used as a replacement for GIF files, as it provides better compression and supports animation as well.</div>
+      </section>
+
+        <h1 class="text-2xl w-full text-center">Homer</h1>
+        <div class="formats flex flex-row items-center space-x-4 border border-black rounded p-4 mb-4">
+            <div class="image-container flex-grow flex flex-col space-y-4">
+                <div class="flex justify-center">
+                    <img
+                        src="images/homer.gif"
+                        alt="Original animation"
+                        class="image w-full max-w-full"
+                    />
+                </div>
+                <div class="image-info text-center"></div>
+            </div>
+            <div class="image-container flex-grow flex flex-col space-y-4">
+                <div class="flex justify-center">
+                    <img
+                        src="images/homer.webp"
+                        alt="WebP animation"
+                        class="image w-full max-w-full"
+                    />
+                </div>
+                <div class="image-info text-center"></div>
+            </div>
+        </div>
+
+        <h1 class="text-2xl w-full text-center">Logotip</h1>
+        <div class="formats flex flex-row items-center space-x-4 border border-black rounded p-4 mb-4">
+            <div class="image-container flex-grow flex flex-col space-y-4">
+                <div class="flex justify-center">
+                    <img
+                        src="images/logotip.png"
+                        alt="Original image"
+                        class="image w-full max-w-full"
+                    />
+                </div>
+                <div class="image-info text-center"></div>
+            </div>
+            <div class="image-container flex-grow flex flex-col space-y-4">
+                <div class="flex justify-center">
+                    <img
+                        src="images/logotip.jpg"
+                        alt="JPG image"
+                        class="image w-full max-w-full"
+                    />
+                </div>
+                <div class="image-info text-center"></div>
+            </div>
+                        <div class="image-container flex-grow flex flex-col space-y-4">
+                <div class="flex justify-center">
+                    <img
+                        src="images/logotip.webp"
+                        alt="WebP image"
+                        class="image w-full max-w-full"
+                    />
+                </div>
+                <div class="image-info text-center"></div>
+            </div>
+        </div>
+
+        <h1 class="text-2xl w-full text-center">Pluja d'Estels</h1>
+        <div class="formats flex flex-row items-center space-x-4 border border-black rounded p-4 mb-4">
+            <div class="image-container flex-grow flex flex-col space-y-4">
+                <div class="flex justify-center">
+                    <img
+                        src="images/plujaEstels.jpg"
+                        alt="Original image"
+                        class="image w-full max-w-full"
+                    />
+                </div>
+                <div class="image-info text-center"></div>
+            </div>
+            <div class="image-container flex-grow flex flex-col space-y-4">
+                <div class="flex justify-center">
+                    <img
+                        src="images/plujaEstels.webp"
+                        alt="WebP image"
+                        class="image w-full max-w-full"
+                    />
+                </div>
+                <div class="image-info text-center"></div>
+            </div>
+        </div>
+
+        <h1 class="text-2xl w-full text-center">Posta de Sol</h1>
+        <div class="formats flex flex-row items-center space-x-4 border border-black rounded p-4 mb-4">
+            <div class="image-container flex-grow flex flex-col space-y-4">
+                <div class="flex justify-center">
+                    <img
+                        src="images/postaDeSol.jpg"
+                        alt="Original image"
+                        class="image w-full max-w-full"
+                    />
+                </div>
+                <div class="image-info text-center"></div>
+            </div>
+            <div class="image-container flex-grow flex flex-col space-y-4">
+                <div class="flex justify-center">
+                    <img
+                        src="images/postaDeSol.webp"
+                        alt="WebP image"
+                        class="image w-full max-w-full"
+                    />
+                </div>
+                <div class="image-info text-center"></div>
+            </div>
+        </div>
+
+        <h1 class="text-2xl w-full text-center">Transparency</h1>
+        <div class="formats flex flex-row items-center space-x-4 border border-black rounded p-4 mb-4">
+            <div class="image-container flex-grow flex flex-col space-y-4">
+                <div class="flex justify-center">
+                    <img
+                        src="images/transparency.png"
+                        alt="Original image"
+                        class="image w-full max-w-full"
+                    />
+                </div>
+                <div class="image-info text-center"></div>
+            </div>
+            <div class="image-container flex-grow flex flex-col space-y-4">
+                <div class="flex justify-center">
+                    <img
+                        src="images/transparency.jpg"
+                        alt="JPG image"
+                        class="image w-full max-w-full"
+                    />
+                </div>
+                <div class="image-info text-center"></div>
+            </div>
+            <div class="image-container flex-grow flex flex-col space-y-4">
+                <div class="flex justify-center">
+                    <img
+                        src="images/transparency.webp"
+                        alt="WebP image"
+                        class="image w-full max-w-full"
+                    />
+                </div>
+                <div class="image-info text-center"></div>
+            </div>
+        </div>
+
+        <table class="table-auto w-full border border-black">
+            <thead>
+                <tr>
+                    <th class="px-4 py-2">Image Name</th>
+                    <th class="px-4 py-2">Original Size (kB)</th>
+                    <th class="px-4 py-2">JPG (saving %)</th>
+                    <th class="px-4 py-2">WEBP (saving %)</th>
+                </tr>
+            </thead>
+            <tbody id="imageTable">
+                <tr>
+                    <td class="px-4 py-2">homer</td>
+                    <td class="px-4 py-2">107.12</td>
+                    <td class="px-4 py-2">---</td>
+                    <td class="px-4 py-2">60.08 (Removed 43.69%)</td>
+                </tr>
+                <tr>
+                    <td class="px-4 py-2">Logotip</td>
+                    <td class="px-4 py-2">286.50</td>
+                    <td class="px-4 py-2">113.00 (Removed 60.53%)</td>
+                    <td class="px-4 py-2">152.75 (Removed 46.76%)</td>
+                </tr>
+                <tr>
+                    <td class="px-4 py-2">plujaEstels</td>
+                    <td class="px-4 py-2">6394.76</td>
+                    <td class="px-4 py-2">---</td>
+                    <td class="px-4 py-2">26411.50 (Added 75.87%)</td>
+                </tr>
+                <tr>
+                    <td class="px-4 py-2">postaDeSol</td>
+                    <td class="px-4 py-2">4965.77</td>
+                    <td class="px-4 py-2">---</td>
+                    <td class="px-4 py-2">26355.80 (Added 81.91%)</td>
+                </tr>
+                <tr>
+                    <td class="px-4 py-2">transparency</td>
+                    <td class="px-4 py-2">2478.56</td>
+                    <td class="px-4 py-2">16.63 (Removed 99.33%)</td>
+                    <td class="px-4 py-2">885.29 (Removed 64.32%)</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -3,39 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Image Showcase</title>
+    <title>Image Format Experiment</title>
     <link
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="styles/main.css" />
   </head>
-  <body class="bg-gray-200">
-    <nav class="p-6 bg-white flex justify-between mb-6">
-      <ul class="flex items-center">
-        <li class="mr-6">
-          <a class="text-blue-500" href="#">Home</a>
-        </li>
-        <li class="mr-6">
-          <a class="text-blue-500" href="#">About</a>
-        </li>
+
+  <body class="bg-gray-300">
+    <nav class="bg-blue-500 text-white text-center p-5">
+      <ul class="flex justify-center space-x-4">
+        <li><a href="webp.html">WebP</a></li>
+        <li><a href="avif.html">AVIF</a></li>
       </ul>
     </nav>
-    <div class="container mx-auto">
-      <img src="images/logotip.png" class="image" alt="Image 1" />
-      <img src="images/logotip.webp" class="image" alt="Image 2" />
-
-      <table class="table-auto w-full">
-        <thead>
-          <tr>
-            <th class="px-4 py-2">Image Name</th>
-            <th class="px-4 py-2">Original Size (kB)</th>
-            <th class="px-4 py-2">JPG (saving %)</th>
-            <th class="px-4 py-2">WEB (saving %)</th>
-          </tr>
-        </thead>
-        <tbody id="imageTable"></tbody>
-      </table>
-    </div>
-    <script src="script.js"></script>
+    <header class="bg-blue-500 text-white text-center p-5">
+      <h1 class="text-4xl">Modern Image Formats</h1>
+    </header>
+    <main
+      class="text-base text-center p-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-5 justify-items-center"
+    >
+      <div class="border border-blue-500 rounded p-4">
+        <h2 class="text-2xl mb-4">WebP</h2>
+        <p>WebP is a modern image format that provides superior lossless and lossy compression for images on the web. Using WebP, webmasters and web developers can create smaller, richer images that make the web faster.</p>
+      </div>
+      <div class="border border-blue-500 rounded p-4">
+        <h2 class="text-2xl mb-4">AVIF</h2>
+        <p>AVIF is a new image format derived from the keyframes of AV1 video. It's royalty-free and widely supported by streaming services, like Netflix. AVIF offers significant file size reduction for images compared with JPEG or WebP.</p>
+      </div>
+    </main>
+    <script src="scripts/main.js"></script>
   </body>
 </html>

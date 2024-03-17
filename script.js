@@ -1,33 +1,65 @@
-imageInput.addEventListener('change', (event) => {
-    const files = Array.from(event.target.files);
-    files.forEach(file => {
-        const row = document.createElement('tr');
+// Aquest codi ens ajuda a mostrar informació de les imatges de manera dinàmica
 
-        const nameCell = document.createElement('td');
-        nameCell.textContent = file.name;
-        nameCell.className = 'border px-4 py-2';
-        row.appendChild(nameCell);
+const images = Array.from(document.querySelectorAll("img"));
+const infoContainers = Array.from(document.querySelectorAll(".image-info"));
 
-        const originalSizeCell = document.createElement('td');
-        const originalSize = (file.size / 1024).toFixed(2);
-        originalSizeCell.textContent = originalSize;
-        originalSizeCell.className = 'border px-4 py-2';
-        row.appendChild(originalSizeCell);
+// Per obtenir el "pes" d'una imatge a JS podem fer servir el mètode fetch per obtenir la imatge com a blob i després obtenir la seva mida en bytes.
+// Més info sobre Blob --> https://es.javascript.info/blob
 
-        const jpgSavingCell = document.createElement('td');
-        const jpgSize = getJpgSize(file);
-        const jpgSaving = ((originalSize - jpgSize) / originalSize * 100).toFixed(2);
-        jpgSavingCell.textContent = jpgSaving + '%';
-        jpgSavingCell.className = 'border px-4 py-2';
-        row.appendChild(jpgSavingCell);
+async function getImageInfo(url) {
+  return new Promise(async (resolve, reject) => {
+    const img = new Image();
+    img.src = url;
 
-        const webSavingCell = document.createElement('td');
-        const webSize = getWebSize(file);
-        const webSaving = ((originalSize - webSize) / originalSize * 100).toFixed(2);
-        webSavingCell.textContent = webSaving + '%';
-        webSavingCell.className = 'border px-4 py-2';
-        row.appendChild(webSavingCell);
+    img.onload = async () => {
+      try {
+        const response = await fetch(url);
+        // blob és un tipus de dades que representa un objecte de dades binàries. En el cas de les imatges
+        const blob = await response.blob();
+        console.dir(blob);
+        const format = url.split(".").pop();
+        const dimensions = {
+          width: img.width,
+          height: img.height,
+        };
+        const alt = img.alt;
+        const size = blob.size;
 
-        tableBody.appendChild(row);
-    });
+        resolve({ format, dimensions, alt, size });
+      } catch (error) {
+        reject(error);
+      }
+    };
+
+    img.onerror = reject;
+  });
+}
+
+function displayImageInfo(imgElement, container) {
+  getImageInfo(imgElement.src)
+    .then((info) => {
+      const formatElement = document.createElement("p");
+      formatElement.textContent = `Format: ${info.format}`;
+      container.appendChild(formatElement);
+
+      const dimensionsElement = document.createElement("p");
+      dimensionsElement.textContent = `Dimensions: ${info.dimensions.width}x${info.dimensions.height}`;
+      container.appendChild(dimensionsElement);
+
+      const altElement = document.createElement("p");
+      altElement.textContent = `Alt: ${imgElement.alt}`;
+      container.appendChild(altElement);
+
+      const sizeInKB = (info.size / 1024).toFixed(2);
+      const sizeElement = document.createElement("p");
+      sizeElement.textContent = `Size: ${sizeInKB} KB`;
+      container.appendChild(sizeElement);
+    })
+    .catch(console.error);
+}
+
+const container = document.querySelector("#image-info-container");
+
+images.forEach((img, i) => {
+  displayImageInfo(img, infoContainers[i]);
 });
