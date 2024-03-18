@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Image Formats | AVIF</title>
+    <link
+        href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+
+<body class="bg-gray-300">
+    <nav class="bg-blue-500 text-white text-center p-5">
+        <ul class="flex justify-center space-x-4">
+            <li><a href="index.html">Index</a></li>
+            <li><a href="webp.html">WebP</a></li>
+        </ul>
+    </nav>
+
+    <header class="bg-blue-500 text-white text-center p-5">
+        <h1 class="text-4xl">AVIF</h1>
+    </header>
+
+    <main class="text-base text-center p-10 flex flex-col">
+      <section class="text-base text-center p-10">
+        <h2 class="text-2xl mb-4 font-bold">Questions</h2>
+        <p class="mb-2 font-bold">Explain what you could observe, the differences, if AVIF is a good replacement for WebP?</p>
+        <div class="mt-4"></div>
+      </section>
+
+        <h1 class="text-2xl w-full text-center">Ferris Wheel</h1>
+        <div class="formats flex flex-row items-center space-x-4 border border-black rounded p-4 mb-4">
+            <div class="image-container flex-grow flex flex-col space-y-4">
+                <div class="flex justify-center">
+                    <img
+                        src="images/ferris-wheel.jpg"
+                        alt="Original image"
+                        class="image w-full max-w-full"
+                    />
+                </div>
+                <div class="image-info text-center"></div>
+            </div>
+            <div class="image-container flex-grow flex flex-col space-y-4">
+                <div class="flex justify-center">
+                    <img
+                        src="images/ferris-wheel.webp"
+                        alt="WebP image"
+                        class="image w-full max-w-full"
+                    />
+                </div>
+                <div class="image-info text-center"></div>
+            </div>
+            <div class="image-container flex-grow flex flex-col space-y-4">
+                <div class="flex justify-center">
+                    <img
+                        src="images/ferris-wheel.avif"
+                        alt="AVIF image"
+                        class="image w-full max-w-full"
+                    />
+                </div>
+                <div class="image-info text-center"></div>
+            </div>
+        </div>
+
+        <h1 class="text-2xl w-full text-center">Tracking Finances</h1>
+        <div class="formats flex flex-row items-center space-x-4 border border-black rounded p-4 mb-4">
+            <div class="image-container flex-grow flex flex-col space-y-4">
+                <div class="flex justify-center">
+                    <img
+                        src="images/tracking-finances.jpg"
+                        alt="Original image"
+                        class="image w-full max-w-full"
+                    />
+                </div>
+                <div class="image-info text-center"></div>
+            </div>
+            <div class="image-container flex-grow flex flex-col space-y-4">
+                <div class="flex justify-center">
+                    <img
+                        src="images/tracking-finances.webp"
+                        alt="WebP image"
+                        class="image w-full max-w-full"
+                    />
+                </div>
+                <div class="image-info text-center"></div>
+            </div>
+                        <div class="image-container flex-grow flex flex-col space-y-4">
+                <div class="flex justify-center">
+                    <img
+                        src="images/tracking-finances.avif"
+                        alt="AVIF Image"
+                        class="image w-full max-w-full"
+                    />
+                </div>
+                <div class="image-info text-center"></div>
+            </div>
+        </div>
+
+        <h1 class="text-2xl w-full text-center">Monochrome Horse</h1>
+        <div class="formats flex flex-row items-center space-x-4 border border-black rounded p-4 mb-4">
+            <div class="image-container flex-grow flex flex-col space-y-4">
+                <div class="flex justify-center">
+                    <img
+                        src="images/monochrome-horse.jpg"
+                        alt="Original image"
+                        class="image w-full max-w-full"
+                    />
+                </div>
+                <div class="image-info text-center"></div>
+            </div>
+            <div class="image-container flex-grow flex flex-col space-y-4">
+                <div class="flex justify-center">
+                    <img
+                        src="images/monochrome-horse.webp"
+                        alt="WebP image"
+                        class="image w-full max-w-full"
+                    />
+                </div>
+                <div class="image-info text-center"></div>
+            </div>
+                        <div class="image-container flex-grow flex flex-col space-y-4">
+                <div class="flex justify-center">
+                    <img
+                        src="images/monochrome-horse.avif"
+                        alt="AVIF image"
+                        class="image w-full max-w-full"
+                    />
+                </div>
+                <div class="image-info text-center"></div>
+            </div>
+        </div>
+
+        <table class="table-auto w-full border border-black">
+            <thead>
+                <tr>
+                    <th class="px-4 py-2">Image Name</th>
+                    <th class="px-4 py-2">Original Size (kB)</th>
+                    <th class="px-4 py-2">JPG (saving %)</th>
+                    <th class="px-4 py-2">WEBP (saving %)</th>
+                </tr>
+            </thead>
+            <tbody id="imageTable">
+                <tr>
+                    <td class="px-4 py-2">Ferris Wheel</td>
+                    <td class="px-4 py-2">1604.80</td>
+                    <td class="px-4 py-2">10.84 (89.89%)</td>
+                    <td class="px-4 py-2">56.49 (47.25%)</td>
+                </tr>
+                <tr>
+                    <td class="px-4 py-2">Tracking Finances</td>
+                    <td class="px-4 py-2">784.97</td>
+                    <td class="px-4 py-2">70.71 (75.31%)</td>
+                    <td class="px-4 py-2">39.98 (86.04%)</td>
+                </tr>
+                <tr>
+                    <td class="px-4 py-2">Monochrome Horse</td>
+                    <td class="px-4 py-2">3448.11</td>
+                    <td class="px-4 py-2">589.77 (90.78%)</td>
+                    <td class="px-4 py-2">568.55 (91.11%)</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
